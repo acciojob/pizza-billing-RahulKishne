@@ -9,6 +9,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
+        this.price=300;
     }
 
     public int getPrice(){
@@ -17,18 +18,29 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
+        price+=80;
+
     }
 
     public void addExtraToppings(){
         // your code goes here
+        if(isVeg){
+            price+=70;
+        }
+        price+=120;
     }
 
     public void addTakeaway(){
         // your code goes here
+        price+=20;
     }
 
     public String getBill(){
         // your code goes here
+        if(isVeg) {
+            bill += price + " ";
+        }
+
         return this.bill;
     }
 }
